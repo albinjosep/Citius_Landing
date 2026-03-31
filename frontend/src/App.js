@@ -218,7 +218,7 @@ function DashboardMockup() {
         {/* Campaign header */}
         <div className="flex items-center justify-between">
           <div>
-            <p className="font-heading text-xs font-medium">DevTools & Infra Outbound — <span className="text-muted-foreground">52 active sequences</span></p>
+            <p className="font-heading text-xs font-medium">DevTools & Infra Outbound <span className="text-muted-foreground">· 52 active sequences</span></p>
           </div>
           <span className="text-[10px] font-mono text-green-600 flex items-center gap-1">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> AI running 24/7
@@ -290,7 +290,7 @@ function HeroSection() {
           </h1>
 
           <p className="font-body text-base md:text-lg leading-relaxed text-foreground/70 max-w-lg animate-fade-up-delay-2">
-            Your outbound strategy, execution, and optimization — completely done for you. Turn high‑intent signals into qualified pipeline.
+            Your outbound strategy, execution, and optimization, completely done for you. Turn high‑intent signals into qualified pipeline.
           </p>
 
           <div id="hero-waitlist" className="animate-fade-up-delay-3">
@@ -315,7 +315,7 @@ const steps = [
     icon: Target,
     emoji: null,
     title: "You define your ideal client",
-    desc: "Tell us who you're targeting — industry, company size, job title, tech stack. We build a prospect list and enrich every contact with fresh signals and intent data.",
+    desc: "Tell us who you're targeting: industry, company size, job title, tech stack. We build a prospect list and enrich every contact with fresh signals and intent data.",
     tag: "Live in 5 minutes",
   },
   {
@@ -323,7 +323,7 @@ const steps = [
     icon: PenLine,
     emoji: null,
     title: "AI writes every message",
-    desc: "Each email references real context about the prospect — recent company news, a new hire, their tech stack. No templates. Every message reads like it came from a senior partner.",
+    desc: "Each email references real context about the prospect: recent company news, a new hire, their tech stack. No templates. Every message reads like it came from a senior partner.",
     tag: "1,000 touchpoints/day",
   },
   {
@@ -331,7 +331,7 @@ const steps = [
     icon: CalendarCheck,
     emoji: null,
     title: "Meetings land in your calendar",
-    desc: "When a prospect replies with interest, AI handles all scheduling — timezone coordination, confirmation sequences, reminders. You wake up to booked calls.",
+    desc: "When a prospect replies with interest, AI handles all scheduling: timezone coordination, confirmation sequences, reminders. You wake up to booked calls.",
     tag: "You just close deals",
   },
 ];
@@ -348,7 +348,7 @@ function HowItWorksSection() {
             <span className="text-foreground/50">in three steps.</span>
           </h2>
           <p className="font-body text-base md:text-lg leading-relaxed text-foreground/60 mt-4">
-            Set it up once. We research your targets, write every message, manage all follow‑ups, and book the calls — your consultants just show up and close.
+            Set it up once. We research your targets, write every message, manage all follow-ups, and book the calls. Your consultants just show up and close.
           </p>
         </div>
 
@@ -372,14 +372,14 @@ function HowItWorksSection() {
             <Users size={22} strokeWidth={1.5} className="text-[#1B6B3A] shrink-0 mt-1" />
             <div>
               <h3 className="font-heading text-lg font-medium tracking-tight mb-1">1 Human = 10 SDRs</h3>
-              <p className="font-body text-sm leading-relaxed text-foreground/70">One account manager oversees hundreds of accounts. The role shifts from execution to supervision. AI handles 80‑90% of the pipeline work.</p>
+              <p className="font-body text-sm leading-relaxed text-foreground/70">One account manager oversees hundreds of accounts. The role shifts from execution to supervision. AI handles 80-90% of the pipeline work.</p>
             </div>
           </div>
           <div data-testid="scale-card-learning" className="p-8 lg:p-10 bg-white border border-border flex gap-5 items-start">
             <TrendingUp size={22} strokeWidth={1.5} className="text-[#1B6B3A] shrink-0 mt-1" />
             <div>
               <h3 className="font-heading text-lg font-medium tracking-tight mb-1">Continuous Learning</h3>
-              <p className="font-body text-sm leading-relaxed text-foreground/70">Every open, reply, and booked meeting feeds back into the system. The AI compounds in intelligence over time — a data flywheel your competitors can't replicate.</p>
+              <p className="font-body text-sm leading-relaxed text-foreground/70">Every open, reply, and booked meeting feeds back into the system. The AI compounds in intelligence over time, a data flywheel your competitors can't replicate.</p>
             </div>
           </div>
         </div>
@@ -394,13 +394,13 @@ const scaleFeatures = [
     num: "01",
     icon: Cpu,
     title: "AI-Powered Prospecting",
-    desc: "AI researches target accounts, identifies decision-makers, and crafts deeply personalized outreach — referencing company news, job changes, and tech stack.",
+    desc: "AI researches target accounts, identifies decision-makers, and crafts deeply personalized outreach, referencing company news, job changes, and tech stack.",
   },
   {
     num: "02",
     icon: Clock,
     title: "Automated Scheduling",
-    desc: "Handles the full back-and-forth of meeting booking — timezone coordination, rescheduling, and confirmations. What took 3-5 emails happens instantly.",
+    desc: "Handles the full back-and-forth of meeting booking: timezone coordination, rescheduling, and confirmations. What took 3-5 emails happens instantly.",
   },
   {
     num: "03",
@@ -412,7 +412,7 @@ const scaleFeatures = [
     num: "04",
     icon: TrendingUp,
     title: "Continuous Learning",
-    desc: "Every open, reply, and booked meeting feeds back into the system. The AI compounds in intelligence over time — a data flywheel your competitors can't replicate.",
+    desc: "Every open, reply, and booked meeting feeds back into the system. The AI compounds in intelligence over time, a data flywheel your competitors can't replicate.",
   },
 ];
 
@@ -489,7 +489,7 @@ function ResultsSection() {
               {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-[#1B6B3A] text-[#1B6B3A]" />)}
             </div>
             <p className="font-body text-sm md:text-base leading-relaxed text-foreground/80 mb-8">
-              "We went from 2 technical buyer calls a month to 11 in our first six weeks. The outreach was indistinguishable from our best developer advocate — except it ran while we slept."
+              "We went from 2 technical buyer calls a month to 11 in our first six weeks. The outreach was indistinguishable from our best developer advocate, except it ran while we slept."
             </p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#1B6B3A] flex items-center justify-center text-white font-heading text-sm font-bold">MK</div>
@@ -524,18 +524,18 @@ function ResultsSection() {
 function BeforeAfterSection() {
   const beforeItems = [
     "$70-80K per SDR before commission, benefits, or management overhead",
-    "14-month average tenure — retrain from scratch every time someone leaves",
-    "Quality varies rep to rep — every email sounds like a different person wrote it",
+    "14-month average tenure. Retrain from scratch every time someone leaves",
+    "Quality varies rep to rep. Every email sounds like a different person wrote it",
     "Your best rep leaves Friday. Their pipeline knowledge walks out the door.",
     "Scaling to 1,000 accounts = 10-20 more hires, salaries, and onboarding cycles",
   ];
 
   const afterItems = [
-    "One flat monthly fee — no salary, no commission, no benefits, no churn",
-    "Runs 24/7 across every timezone — Tokyo gets the same quality as New York",
-    "Consistent brand voice in every single message — always on-brand, always polished",
+    "One flat monthly fee. No salary, no commission, no benefits, no churn",
+    "Runs 24/7 across every timezone. Tokyo gets the same quality as New York",
+    "Consistent brand voice in every single message. Always on-brand, always polished",
     "All learning stays in the system and compounds with every send",
-    "Scale to 10,000 accounts — it's a slider, not a headcount decision",
+    "Scale to 10,000 accounts. It's a slider, not a headcount decision",
   ];
 
   return (
@@ -593,11 +593,11 @@ function BeforeAfterSection() {
 const faqItems = [
   {
     q: "What does 'done for you' actually mean?",
-    a: "We manage your entire outbound system end-to-end — strategy, targeting, copywriting, sequencing, follow-ups, and scheduling. Your team doesn't touch any of it. You just show up to booked calls and close.",
+    a: "We manage your entire outbound system end-to-end: strategy, targeting, copywriting, sequencing, follow-ups, and scheduling. Your team doesn't touch any of it. You just show up to booked calls and close.",
   },
   {
     q: "Can I use my CRM or pipeline tools?",
-    a: "Absolutely. We sync with whatever tools you use — HubSpot, Salesforce, Pipedrive, you name it. We're non-custodial. All activity, meetings, and prospect data flow into your existing workflow automatically.",
+    a: "Absolutely. We sync with whatever tools you use: HubSpot, Salesforce, Pipedrive, you name it. We're non-custodial. All activity, meetings, and prospect data flow into your existing workflow automatically.",
   },
   {
     q: "What happens to my existing SDR team?",
@@ -605,7 +605,7 @@ const faqItems = [
   },
   {
     q: "How personalized is the outreach really?",
-    a: "Every message references real context — a prospect's recent funding round, a new engineering hire, their tech stack migration, competitive pressures. It reads like a senior partner spent 20 minutes researching before writing. Because the AI did.",
+    a: "Every message references real context: a prospect's recent funding round, a new engineering hire, their tech stack migration, competitive pressures. It reads like a senior partner spent 20 minutes researching before writing. Because the AI did.",
   },
   {
     q: "How much does it cost?",
@@ -613,7 +613,7 @@ const faqItems = [
   },
   {
     q: "How quickly can I see results?",
-    a: "Most teams see their first AI-booked meetings within the first week. The system continuously improves — by month two, you'll see a compounding data flywheel effect on reply rates and meeting conversions.",
+    a: "Most teams see their first AI-booked meetings within the first week. The system continuously improves. By month two, you'll see a compounding data flywheel effect on reply rates and meeting conversions.",
   },
 ];
 
