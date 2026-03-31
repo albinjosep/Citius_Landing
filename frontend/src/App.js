@@ -290,7 +290,7 @@ function HeroSection() {
           </h1>
 
           <p className="font-body text-base md:text-lg leading-relaxed text-foreground/70 max-w-lg animate-fade-up-delay-2">
-            Turn high‑intent signals into qualified pipeline with deeply personalized outreach and automated meeting booking.
+            Your outbound strategy, execution, and optimization — completely done for you. Turn high‑intent signals into qualified pipeline.
           </p>
 
           <div id="hero-waitlist" className="animate-fade-up-delay-3">
@@ -592,8 +592,12 @@ function BeforeAfterSection() {
 /* ─── FAQ ─── */
 const faqItems = [
   {
-    q: "How does Citius work with tools like Apollo or Instantly?",
-    a: "Citius sits on top of your existing sales stack. We integrate with Apollo, Instantly, and other tools you already use — but instead of you manually running campaigns, our AI handles the research, personalization, sequencing, and follow-ups end-to-end. Think of it as the brain that operates your tools at 10x the scale.",
+    q: "What does 'done for you' actually mean?",
+    a: "We manage your entire outbound system end-to-end — strategy, targeting, copywriting, sequencing, follow-ups, and scheduling. Your team doesn't touch any of it. You just show up to booked calls and close.",
+  },
+  {
+    q: "Can I use my CRM or pipeline tools?",
+    a: "Absolutely. We sync with whatever tools you use — HubSpot, Salesforce, Pipedrive, you name it. We're non-custodial. All activity, meetings, and prospect data flow into your existing workflow automatically.",
   },
   {
     q: "What happens to my existing SDR team?",
@@ -602,10 +606,6 @@ const faqItems = [
   {
     q: "How personalized is the outreach really?",
     a: "Every message references real context — a prospect's recent funding round, a new engineering hire, their tech stack migration, competitive pressures. It reads like a senior partner spent 20 minutes researching before writing. Because the AI did.",
-  },
-  {
-    q: "What channels does Citius support?",
-    a: "Email, LinkedIn, and multi-step sequences across channels. We handle the full cadence from first touch to meeting booked, including follow-ups, rescheduling, and timezone coordination.",
   },
   {
     q: "How much does it cost?",
