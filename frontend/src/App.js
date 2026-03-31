@@ -130,6 +130,7 @@ function WaitlistForm({ variant = "default" }) {
   const isDark = variant === "dark";
 
   if (status === "success") {
+    setTimeout(() => setStatus("idle"), 4000);
     return (
       <div data-testid="waitlist-success-message" className={`flex items-center gap-2 py-3 ${isDark ? "text-green-300" : "text-green-700"}`}>
         <CheckCircle2 size={18} />
