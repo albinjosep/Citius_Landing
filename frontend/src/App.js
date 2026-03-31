@@ -592,28 +592,28 @@ function BeforeAfterSection() {
 /* ─── FAQ ─── */
 const faqItems = [
   {
-    q: "How is this different from tools like Apollo or Instantly?",
-    a: "Those are email automation tools — you still write the copy, build the lists, and manage replies. Citius replaces the entire SDR function. We research targets, write deeply personalized messages using real-time signals, manage multi-channel sequences, and book the meetings. You just show up.",
+    q: "How does Citius work with tools like Apollo or Instantly?",
+    a: "Citius sits on top of your existing sales stack. We integrate with Apollo, Instantly, and other tools you already use — but instead of you manually running campaigns, our AI handles the research, personalization, sequencing, and follow-ups end-to-end. Think of it as the brain that operates your tools at 10x the scale.",
+  },
+  {
+    q: "What happens to my existing SDR team?",
+    a: "They evolve from execution to oversight. One account manager can review AI-generated outreach and handle escalated conversations across hundreds of accounts. Your best people become force-multipliers, not email-senders.",
   },
   {
     q: "How personalized is the outreach really?",
     a: "Every message references real context — a prospect's recent funding round, a new engineering hire, their tech stack migration, competitive pressures. It reads like a senior partner spent 20 minutes researching before writing. Because the AI did.",
   },
   {
-    q: "How long does it take to get started?",
-    a: "Most teams are live in under a week. You define your ICP, we enrich and build the prospect list, you approve the messaging framework, and sequences start running. First meetings typically land within 5-7 business days.",
-  },
-  {
-    q: "What if a prospect replies with a complex question?",
-    a: "AI handles routine replies (scheduling, basic info requests) autonomously. Complex or high-stakes conversations get flagged and routed to your team instantly. You always stay in control of the conversations that matter.",
+    q: "What channels does Citius support?",
+    a: "Email, LinkedIn, and multi-step sequences across channels. We handle the full cadence from first touch to meeting booked, including follow-ups, rescheduling, and timezone coordination.",
   },
   {
     q: "How much does it cost?",
     a: "We're finalizing pricing during our founding cohort. Early access members get locked-in rates significantly below our eventual public pricing. Join the waitlist to secure founding member terms.",
   },
   {
-    q: "Do I need to replace my CRM?",
-    a: "No. Citius integrates with your existing CRM (HubSpot, Salesforce, Pipedrive, etc.). All activity, meetings, and prospect data sync automatically. We fit into your workflow — not the other way around.",
+    q: "How quickly can I see results?",
+    a: "Most teams see their first AI-booked meetings within the first week. The system continuously improves — by month two, you'll see a compounding data flywheel effect on reply rates and meeting conversions.",
   },
 ];
 
