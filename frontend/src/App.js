@@ -365,6 +365,24 @@ function HowItWorksSection() {
             </div>
           ))}
         </div>
+
+        {/* The result: unique value props */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-border border-t-0">
+          <div data-testid="scale-card-humans" className="p-8 lg:p-10 bg-white border border-border flex gap-5 items-start">
+            <Users size={22} strokeWidth={1.5} className="text-[#1B6B3A] shrink-0 mt-1" />
+            <div>
+              <h3 className="font-heading text-lg font-medium tracking-tight mb-1">1 Human = 10 SDRs</h3>
+              <p className="font-body text-sm leading-relaxed text-foreground/70">One account manager oversees hundreds of accounts. The role shifts from execution to supervision. AI handles 80‑90% of the pipeline work.</p>
+            </div>
+          </div>
+          <div data-testid="scale-card-learning" className="p-8 lg:p-10 bg-white border border-border flex gap-5 items-start">
+            <TrendingUp size={22} strokeWidth={1.5} className="text-[#1B6B3A] shrink-0 mt-1" />
+            <div>
+              <h3 className="font-heading text-lg font-medium tracking-tight mb-1">Continuous Learning</h3>
+              <p className="font-body text-sm leading-relaxed text-foreground/70">Every open, reply, and booked meeting feeds back into the system. The AI compounds in intelligence over time — a data flywheel your competitors can't replicate.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -672,7 +690,6 @@ function LandingPage() {
       <Navbar />
       <HeroSection />
       <HowItWorksSection />
-      <ScaleSection />
       <ResultsSection />
       <BeforeAfterSection />
       <FAQSection />
