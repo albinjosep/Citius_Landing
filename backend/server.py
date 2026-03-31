@@ -2,10 +2,11 @@ from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+from supabase import create_client
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict, EmailStr
+from pydantic import BaseModel, Field, ConfigDict
 from typing import List
 import uuid
 from datetime import datetime, timezone
@@ -13,20 +14,25 @@ from datetime import datetime, timezone
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
+# MongoDB connection (kept for other potential uses)
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
-app = FastAPI()
+# Supabase connection
+supabase_url = os.environ['SUPABASE_URL']
+supabase_key = os.environ['SUPABASE_ANON_KEY']
+supabase = create_client(supabase_url, supabase_key)
 
+app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
 
 class WaitlistEntry(BaseModel):
     model_config = ConfigDict(extra="ignore")
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    id: str = ""
     email: str
-    timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    created_at: str = ""
 
 
 class WaitlistCreate(BaseModel):
@@ -48,20 +54,29 @@ async def join_waitlist(input: WaitlistCreate):
     if not email or "@" not in email:
         raise HTTPException(status_code=400, detail="Invalid email address")
 
-    existing = await db.waitlist.find_one({"email": email}, {"_id": 0})
-    if existing:
+    # Check for duplicate in Supabase
+    existing = supabase.table("waitlist").select("id").eq("email", email).execute()
+    if existing.data and len(existing.data) > 0:
         raise HTTPException(status_code=409, detail="Email already registered")
 
-    entry = WaitlistEntry(email=email)
-    doc = entry.model_dump()
-    await db.waitlist.insert_one(doc)
-    return entry
+    # Insert into Supabase
+    result = supabase.table("waitlist").insert({"email": email}).execute()
+
+    if result.data and len(result.data) > 0:
+        row = result.data[0]
+        return WaitlistEntry(
+            id=str(row.get("id", "")),
+            email=row.get("email", email),
+            created_at=str(row.get("created_at", ""))
+        )
+
+    raise HTTPException(status_code=500, detail="Failed to insert")
 
 
 @api_router.get("/waitlist/count", response_model=WaitlistCountResponse)
 async def get_waitlist_count():
-    count = await db.waitlist.count_documents({})
-    return WaitlistCountResponse(count=count)
+    result = supabase.table("waitlist").select("id", count="exact").execute()
+    return WaitlistCountResponse(count=result.count or 0)
 
 
 app.include_router(api_router)
