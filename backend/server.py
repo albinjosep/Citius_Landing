@@ -21,7 +21,7 @@ db = client[os.environ['DB_NAME']]
 
 # Supabase connection
 supabase_url = os.environ['SUPABASE_URL']
-supabase_key = os.environ['SUPABASE_ANON_KEY']
+supabase_key = os.environ['SUPABASE_SERVICE_ROLE_KEY']
 supabase = create_client(supabase_url, supabase_key)
 
 app = FastAPI()
@@ -60,7 +60,7 @@ async def join_waitlist(input: WaitlistCreate):
         raise HTTPException(status_code=409, detail="Email already registered")
 
     # Insert into Supabase
-    result = supabase.table("waitlist").insert({"email": email}).execute()
+    result = supabase.table("waitlist").insert({"email": email, "name": ""}).execute()
 
     if result.data and len(result.data) > 0:
         row = result.data[0]
