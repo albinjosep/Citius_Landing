@@ -1,0 +1,133 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4: Swiss & High-Contrast",
+  "colors": {
+    "background": "#FFFFFF",
+    "foreground": "#0A0A0A",
+    "primary": "#0A0A0A",
+    "primary_foreground": "#FFFFFF",
+    "secondary": "#F5F5F5",
+    "secondary_foreground": "#0A0A0A",
+    "accent": "#002FA7",
+    "accent_foreground": "#FFFFFF",
+    "muted": "#F0F0F0",
+    "muted_foreground": "#737373",
+    "border": "#E5E5E5",
+    "destructive": "#FF3B30"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "IBM Plex Sans",
+    "mono_font": "JetBrains Mono",
+    "h1": "text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1]",
+    "h2": "text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight",
+    "h3": "text-2xl md:text-3xl font-medium tracking-tight",
+    "body": "text-base md:text-lg leading-relaxed text-foreground/80",
+    "overline": "text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-muted-foreground"
+  },
+  "layout": {
+    "spacing": "p-4 md:p-8 lg:p-16",
+    "radius": "rounded-none",
+    "border_width": "border",
+    "grid_system": "Bento Grid Protocol (Tetris Mode for Marketing) mixed with strict Swiss grid. Use 1px borders (border-border) to define structural sections. Containers with borders must have internal padding (p-8 or p-12)."
+  },
+  "components": {
+    "buttons": "Square edges (rounded-none). High contrast hover states. Primary: bg-accent text-white hover:bg-accent/90. Secondary: bg-transparent border border-foreground text-foreground hover:bg-foreground hover:text-white.",
+    "cards": "Flat, 1px border-border, no shadow by default. Hover: slight translate-y-1, crisp shadow. Keep internal padding generous (p-8 to p-12).",
+    "inputs": "Square edges (rounded-none), border-border, focus-visible:ring-1 focus-visible:ring-accent focus-visible:border-accent. High contrast placeholder.",
+    "accordion": "Shadcn Accordion. Use plus/minus icons instead of chevrons if possible, or standard chevrons. border-b border-border."
+  },
+  "sections": {
+    "hero": {
+      "layout": "Grid-cols-1 lg:grid-cols-12. Left column (col-span-7) for massive typography and waitlist form. Right column (col-span-5) for an abstract geometric visual or tech dashboard mockup.",
+      "features": "Include the pulsing waitlist counter below the form (e.g., '● 1,492 sales leaders joined').",
+      "design_notes": "Use the hero_graphic media URL as a prominent visual in the right column, either contained in a sharp box or edge-to-edge."
+    },
+    "how_it_works": {
+      "layout": "Bento Grid (Tetris Mode). 3-4 distinct cards explaining automated prospecting, meeting booking, AI replacement of SDRs.",
+      "style": "Use mono font numbers (01, 02, 03) in the corners. Stark contrast."
+    },
+    "pricing_comparison": {
+      "layout": "Two-column grid layout. Left: Traditional Agency (Gray background, strikethrough text). Right: Citius AI-Native (White background, Accent blue borders, highlighting 65-75% gross margins).",
+      "style": "Visual table or side-by-side cards. Extremely clear value proposition."
+    },
+    "testimonials": {
+      "layout": "Grid of 3 cards. Stark, border-collapse style layout where borders merge.",
+      "style": "Black and white founder headshots."
+    },
+    "faq": {
+      "layout": "Narrow central column (max-w-3xl) to maintain readable line length.",
+      "style": "Minimalist typography, clear spacing between items."
+    },
+    "final_cta": {
+      "layout": "Massive padding (py-32). Centralized or aggressively left-aligned.",
+      "style": "Dark background (bg-primary text-primary-foreground) or Accent background (bg-accent text-white) to invert the page and create a final impact."
+    }
+  },
+  "media": {
+    "logos": [
+      {
+        "url": "https://images.unsplash.com/photo-1770012977129-19f856a1f935?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwY29tcGFueSUyMGxvZ28lMjBtaW5pbWFsaXN0fGVufDB8fHx8MTc3NDk2Nzk2NXww&ixlib=rb-4.1.0&q=85",
+        "category": "trusted_by",
+        "description": "Tech company logo 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1770210217380-d78a69acdc77?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwyfHx0ZWNoJTIwY29tcGFueSUyMGxvZ28lMjBtaW5pbWFsaXN0fGVufDB8fHx8MTc3NDk2Nzk2NXww&ixlib=rb-4.1.0&q=85",
+        "category": "trusted_by",
+        "description": "Tech company logo 2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1761044591996-7a05341a3e12?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHx0ZWNoJTIwY29tcGFueSUyMGxvZ28lMjBtaW5pbWFsaXN0fGVufDB8fHx8MTc3NDk2Nzk2NXww&ixlib=rb-4.1.0&q=85",
+        "category": "trusted_by",
+        "description": "Tech company logo 3"
+      }
+    ],
+    "headshots": [
+      {
+        "url": "https://images.unsplash.com/photo-1659353221237-6a1cfb73fd90?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBkaXZlcnNlJTIwZm91bmRlciUyMGhlYWRzaG90fGVufDB8fHx8MTc3NDk2Nzk2Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "testimonial_author",
+        "description": "Man in suit"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1720874129553-1d2e66076b16?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBkaXZlcnNlJTIwZm91bmRlciUyMGhlYWRzaG90fGVufDB8fHx8MTc3NDk2Nzk2Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "testimonial_author",
+        "description": "Woman standing"
+      },
+      {
+        "url": "https://images.pexels.com/photos/29852895/pexels-photo-29852895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "testimonial_author",
+        "description": "Confident African woman in black suit"
+      }
+    ],
+    "abstract_backgrounds": [
+      {
+        "url": "https://images.pexels.com/photos/12843342/pexels-photo-12843342.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "hero_graphic",
+        "description": "Abstract blue geometric pattern with layered triangles"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1770520216102-b40b13cb9094?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYmx1ZSUyMGdlb21ldHJpYyUyMGFic3RyYWN0JTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzQ5Njc5NzF8MA&ixlib=rb-4.1.0&q=85",
+        "category": "hero_graphic",
+        "description": "Abstract pattern of black shapes on a light blue background"
+      }
+    ]
+  },
+  "animation": {
+    "style": "Minimalist and precise.",
+    "entrance": "Staggered fade-up for grid items. Use framer-motion.",
+    "hover": "Subtle background color shifts, strict 1px border color transitions. No bouncy scaling."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Sharp, minimal, consistent stroke width (1.5px or 2px max)."
+  },
+  "instructions_to_main_agent": [
+    "Use pure HTML/Tailwind for structural layout of the marketing page sections.",
+    "Use Shadcn UI for interactive elements like the Waitlist form (Input, Button) and FAQ (Accordion).",
+    "Import Outfit, IBM Plex Sans, and JetBrains Mono from Google Fonts.",
+    "The waitlist counter MUST have a pulsing green or blue dot (using Tailwind's animate-pulse on a rounded-full div) next to the text.",
+    "Apply Tailwind's 'grayscale' class to the testimonial headshot images to ensure they match the strict Swiss Brutalist aesthetic.",
+    "The Pricing Comparison section must prominently highlight the margin difference (25-30% Traditional vs 65-75% Citius AI) using massive typography (e.g., text-6xl for the numbers).",
+    "Add `data-testid` attributes to all buttons, form inputs, accordion triggers, and key informational elements (like the waitlist counter)."
+  ]
+}
