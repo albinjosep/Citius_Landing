@@ -71,7 +71,7 @@ function Navbar() {
           <Button
             data-testid="navbar-cta-button"
             onClick={() => scrollTo("hero-waitlist")}
-            className="bg-[#002FA7] hover:bg-[#002FA7]/90 text-white rounded-none text-sm px-6 h-9"
+            className="bg-[#1B6B3A] hover:bg-[#1B6B3A]/90 text-white rounded-none text-sm px-6 h-9"
           >
             Get Early Access
           </Button>
@@ -90,7 +90,7 @@ function Navbar() {
         <div className="md:hidden border-t border-border bg-white px-6 py-4 flex flex-col gap-3">
           <button onClick={() => scrollTo("how-it-works")} className="font-body text-sm text-left text-muted-foreground">How it works</button>
           <button onClick={() => scrollTo("results")} className="font-body text-sm text-left text-muted-foreground">Results</button>
-          <Button onClick={() => scrollTo("hero-waitlist")} className="bg-[#002FA7] hover:bg-[#002FA7]/90 text-white rounded-none text-sm">Get Early Access</Button>
+          <Button onClick={() => scrollTo("hero-waitlist")} className="bg-[#1B6B3A] hover:bg-[#1B6B3A]/90 text-white rounded-none text-sm">Get Early Access</Button>
         </div>
       )}
     </nav>
@@ -146,7 +146,7 @@ function WaitlistForm({ variant = "default" }) {
         className={`rounded-none h-11 flex-1 ${
           isDark
             ? "bg-white/10 border-white/20 text-white placeholder:text-white/50 focus-visible:ring-white/40"
-            : "border-border focus-visible:ring-[#002FA7] focus-visible:border-[#002FA7]"
+            : "border-border focus-visible:ring-[#1B6B3A] focus-visible:border-[#1B6B3A]"
         }`}
       />
       <Button
@@ -156,7 +156,7 @@ function WaitlistForm({ variant = "default" }) {
         className={`rounded-none h-11 px-6 font-body text-sm ${
           isDark
             ? "bg-white text-[#0A0A0A] hover:bg-white/90"
-            : "bg-[#002FA7] text-white hover:bg-[#002FA7]/90"
+            : "bg-[#1B6B3A] text-white hover:bg-[#1B6B3A]/90"
         }`}
       >
         {status === "loading" ? "Joining..." : (<>Get Early Access <ArrowRight size={14} className="ml-1" /></>)}
@@ -172,7 +172,7 @@ function WaitlistForm({ variant = "default" }) {
 function DashboardMockup() {
   const prospects = [
     { name: "Sarah Chen, CTO", company: "Vortex Data", channel: "Email", status: "Meeting booked", statusColor: "text-green-600", icon: Mail },
-    { name: "Marcus Webb, VP Eng", company: "CloudScale", channel: "LinkedIn", status: "Replied", statusColor: "text-[#002FA7]", icon: Linkedin },
+    { name: "Marcus Webb, VP Eng", company: "CloudScale", channel: "LinkedIn", status: "Replied", statusColor: "text-[#1B6B3A]", icon: Linkedin },
     { name: "Priya Nair, Head of Platform", company: "MetricsOps", channel: "Email", status: "Opened ×4", statusColor: "text-amber-600", icon: Mail },
     { name: "Tom Rodriguez, DevOps Lead", company: "InfraBuild", channel: "Email", status: "Sent", statusColor: "text-muted-foreground", icon: Mail },
     { name: "Ji-Young Park, Tech Lead", company: "DeployFast", channel: "LinkedIn", status: "Sent", statusColor: "text-muted-foreground", icon: Linkedin },
@@ -197,7 +197,7 @@ function DashboardMockup() {
         {/* Campaign tags */}
         <div className="flex items-center gap-2 flex-wrap">
           <span className="font-mono text-[10px] tracking-wider uppercase text-muted-foreground">Campaigns</span>
-          <span className="bg-[#002FA7] text-white text-[10px] font-mono px-2.5 py-1">DevTools Startups <span className="opacity-70 ml-1">52</span></span>
+          <span className="bg-[#1B6B3A] text-white text-[10px] font-mono px-2.5 py-1">DevTools Startups <span className="opacity-70 ml-1">52</span></span>
           <span className="bg-secondary text-foreground/60 text-[10px] font-mono px-2.5 py-1">Cloud Infrastructure</span>
           <span className="bg-secondary text-foreground/60 text-[10px] font-mono px-2.5 py-1 hidden sm:inline-block">Data Engineering</span>
           <span className="bg-secondary text-foreground/60 text-[10px] font-mono px-2.5 py-1 hidden lg:inline-block">MLOps Platforms</span>
@@ -282,7 +282,7 @@ function HeroSection() {
           <h1 data-testid="hero-heading" className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.08] animate-fade-up-delay-1">
             The AI Platform for{" "}
             <br />
-            <span className="text-[#002FA7]">Signal‑Driven Outbound</span>
+            <span className="text-[#1B6B3A]">Signal‑Driven Outbound</span>
           </h1>
 
           <p className="font-body text-base md:text-lg leading-relaxed text-foreground/70 max-w-lg animate-fade-up-delay-2">
@@ -352,10 +352,10 @@ function HowItWorksSection() {
           {steps.map((s) => (
             <div key={s.num} data-testid={`step-card-${s.num}`} className="p-8 lg:p-10 bg-white border border-border relative group hover:-translate-y-0.5 transition-transform duration-200">
               <span className="font-mono text-xs text-muted-foreground absolute top-4 right-4">{s.num}</span>
-              <s.icon size={24} strokeWidth={1.5} className="text-[#002FA7] mb-6" />
+              <s.icon size={24} strokeWidth={1.5} className="text-[#1B6B3A] mb-6" />
               <h3 className="font-heading text-lg md:text-xl font-medium tracking-tight mb-3">{s.title}</h3>
               <p className="font-body text-sm leading-relaxed text-foreground/70 mb-5">{s.desc}</p>
-              <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-[#002FA7]">
+              <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-[#1B6B3A]">
                 <Zap size={12} /> {s.tag}
               </span>
             </div>
@@ -384,17 +384,17 @@ function ResultsSection() {
         {/* Metrics grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border border-border mb-16">
           <div data-testid="metric-cac" className="p-8 lg:p-10 bg-white border border-border">
-            <span className="font-heading text-5xl md:text-6xl font-bold tracking-tighter text-[#002FA7]">90%</span>
+            <span className="font-heading text-5xl md:text-6xl font-bold tracking-tighter text-[#1B6B3A]">90%</span>
             <p className="font-heading text-base font-medium mt-2">Lower customer acquisition cost</p>
             <p className="font-mono text-xs text-muted-foreground mt-1">vs hiring an in-house SDR</p>
           </div>
           <div data-testid="metric-calls" className="p-8 lg:p-10 bg-white border border-border">
-            <span className="font-heading text-5xl md:text-6xl font-bold tracking-tighter text-[#002FA7]">3-5x</span>
+            <span className="font-heading text-5xl md:text-6xl font-bold tracking-tighter text-[#1B6B3A]">3-5x</span>
             <p className="font-heading text-base font-medium mt-2">More discovery calls booked per month</p>
             <p className="font-mono text-xs text-muted-foreground mt-1">vs an equivalent SDR headcount</p>
           </div>
           <div data-testid="metric-automated" className="p-8 lg:p-10 bg-white border border-border">
-            <span className="font-heading text-5xl md:text-6xl font-bold tracking-tighter text-[#002FA7]">80%</span>
+            <span className="font-heading text-5xl md:text-6xl font-bold tracking-tighter text-[#1B6B3A]">80%</span>
             <p className="font-heading text-base font-medium mt-2">Of outbound work automated</p>
             <p className="font-mono text-xs text-muted-foreground mt-1">1 founder runs 500+ accounts</p>
           </div>
@@ -404,13 +404,13 @@ function ResultsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-border">
           <div data-testid="testimonial-card-0" className="p-8 lg:p-10 bg-white border border-border">
             <div className="flex gap-0.5 mb-4">
-              {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-[#002FA7] text-[#002FA7]" />)}
+              {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-[#1B6B3A] text-[#1B6B3A]" />)}
             </div>
             <p className="font-body text-sm md:text-base leading-relaxed text-foreground/80 mb-8">
               "We went from 2 technical buyer calls a month to 11 in our first six weeks. The outreach was indistinguishable from our best developer advocate — except it ran while we slept."
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#002FA7] flex items-center justify-center text-white font-heading text-sm font-bold">MK</div>
+              <div className="w-10 h-10 rounded-full bg-[#1B6B3A] flex items-center justify-center text-white font-heading text-sm font-bold">MK</div>
               <div>
                 <p className="font-heading text-sm font-medium">Marcus K.</p>
                 <p className="font-mono text-[10px] text-muted-foreground">Co-Founder, Cloud Infra Platform · Founding member</p>
@@ -419,7 +419,7 @@ function ResultsSection() {
           </div>
           <div data-testid="testimonial-card-1" className="p-8 lg:p-10 bg-white border border-border">
             <div className="flex gap-0.5 mb-4">
-              {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-[#002FA7] text-[#002FA7]" />)}
+              {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-[#1B6B3A] text-[#1B6B3A]" />)}
             </div>
             <p className="font-body text-sm md:text-base leading-relaxed text-foreground/80 mb-8">
               "Multiple engineering leads replied asking how we knew so much about their stack. That's never happened with a generic cold email tool. The personalization is genuinely different."
@@ -487,15 +487,15 @@ function BeforeAfterSection() {
           </div>
 
           {/* After */}
-          <div data-testid="after-citius" className="p-8 lg:p-10 bg-white border-2 border-[#002FA7] relative">
+          <div data-testid="after-citius" className="p-8 lg:p-10 bg-white border-2 border-[#1B6B3A] relative">
             <div className="flex items-center gap-2 mb-6">
-              <CheckCircle2 size={16} className="text-[#002FA7]" />
+              <CheckCircle2 size={16} className="text-[#1B6B3A]" />
               <span className="font-heading text-base font-semibold">After Citius</span>
             </div>
             <ul className="space-y-4">
               {afterItems.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 size={14} className="text-[#002FA7] mt-1 shrink-0" />
+                  <CheckCircle2 size={14} className="text-[#1B6B3A] mt-1 shrink-0" />
                   <span className="font-body text-sm text-foreground/80 leading-relaxed">{item}</span>
                 </li>
               ))}
