@@ -279,9 +279,6 @@ function HeroSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         <div className="lg:col-span-5 space-y-6">
           <div className="animate-fade-up">
-            <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
-              AI-Native Sales Platform
-            </span>
           </div>
 
           <h1 data-testid="hero-heading" className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.08] animate-fade-up-delay-1">
