@@ -23,6 +23,10 @@ import {
   PenLine,
   CalendarCheck,
   Zap,
+  Users,
+  Clock,
+  TrendingUp,
+  Cpu,
 } from "lucide-react";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -366,6 +370,66 @@ function HowItWorksSection() {
   );
 }
 
+/* ─── Scale Section ─── */
+const scaleFeatures = [
+  {
+    num: "01",
+    icon: Cpu,
+    title: "AI-Powered Prospecting",
+    desc: "AI researches target accounts, identifies decision-makers, and crafts deeply personalized outreach — referencing company news, job changes, and tech stack.",
+  },
+  {
+    num: "02",
+    icon: Clock,
+    title: "Automated Scheduling",
+    desc: "Handles the full back-and-forth of meeting booking — timezone coordination, rescheduling, and confirmations. What took 3-5 emails happens instantly.",
+  },
+  {
+    num: "03",
+    icon: Users,
+    title: "1 Human = 10 SDRs",
+    desc: "One account manager oversees hundreds of accounts. The role shifts from execution to supervision. AI handles 80-90% of the pipeline work.",
+  },
+  {
+    num: "04",
+    icon: TrendingUp,
+    title: "Continuous Learning",
+    desc: "Every open, reply, and booked meeting feeds back into the system. The AI compounds in intelligence over time — a data flywheel your competitors can't replicate.",
+  },
+];
+
+function ScaleSection() {
+  return (
+    <section data-testid="scale-section" className="py-20 lg:py-28 px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16 max-w-2xl">
+          <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground block mb-4">Why AI-Native</span>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+            Scale through compute,
+            <br />
+            <span className="text-foreground/50">not headcount.</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-border">
+          {scaleFeatures.map((f) => (
+            <div
+              key={f.num}
+              data-testid={`scale-card-${f.num}`}
+              className="p-8 lg:p-12 bg-white border border-border hover:-translate-y-0.5 transition-transform duration-200 relative group"
+            >
+              <span className="font-mono text-xs text-muted-foreground absolute top-4 right-4">{f.num}</span>
+              <f.icon size={24} strokeWidth={1.5} className="text-[#1B6B3A] mb-6" />
+              <h3 className="font-heading text-xl md:text-2xl font-medium tracking-tight mb-3">{f.title}</h3>
+              <p className="font-body text-sm md:text-base leading-relaxed text-foreground/70">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─── Results Section ─── */
 function ResultsSection() {
   return (
@@ -608,6 +672,7 @@ function LandingPage() {
       <Navbar />
       <HeroSection />
       <HowItWorksSection />
+      <ScaleSection />
       <ResultsSection />
       <BeforeAfterSection />
       <FAQSection />
