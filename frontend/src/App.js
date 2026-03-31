@@ -33,7 +33,11 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
     setMenuOpen(false);
   };
 
@@ -276,7 +280,7 @@ function HeroSection() {
           </div>
 
           <h1 data-testid="hero-heading" className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.08] animate-fade-up-delay-1">
-            The AI Platform for
+            The AI Platform for{" "}
             <br />
             <span className="text-[#002FA7]">Signal‑Driven Outbound</span>
           </h1>
